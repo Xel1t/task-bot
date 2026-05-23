@@ -29,7 +29,9 @@ from telegram.ext import (
 
 # ─── Настройки ───────────────────────────────────────────────────────────────
 
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
+import os
+
+BOT_TOKEN = os.environ["BOT_TOKEN"].strip().strip('"').strip("'")
 
 # Telegram user_id каждого партнёра — заполни после /start
 USERS = {
